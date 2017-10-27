@@ -50,9 +50,15 @@ class ColorViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.textLabel?.text = color.name
         cell.backgroundColor = color.uiColor
+        cell.selectionStyle = .none
         
         return cell
     }
+    
+    //Deselects selected cell
+    //func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //    tableView.cellForRow(at: indexPath)?.isSelected = false
+    //}
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ColorDetailViewController,
